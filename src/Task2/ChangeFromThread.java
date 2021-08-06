@@ -5,7 +5,7 @@ public class ChangeFromThread {
     private volatile int count;
     private   String  result;
 
-    public int getLimit() {
+    public synchronized int getLimit() {
         return limit;
     }
 
@@ -13,7 +13,7 @@ public class ChangeFromThread {
         return result;
     }
 
-    public int getCount() {
+    public synchronized int getCount() {
         return count;
     }
 
