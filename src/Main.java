@@ -1,13 +1,12 @@
+import Task1.TimeThread;
 import Task2.ChangeFromThread;
 
 public class Main {
     public static void main(String[] args) {
  //--------------------------------------Task1
 
-       /* TimeThread timeThread = new TimeThread();
-        Thread threadCall = new Thread();
-        threadCall.start();
-        synchronized (threadCall) {
+        TimeThread timeThread = new TimeThread();
+
             try {
                 while (!timeThread.thread.isInterrupted()) {
                     if (timeThread.isDeadTime()) {
@@ -20,10 +19,10 @@ public class Main {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-        }*/
+
  //---------------------------------------Task2
 
-        ChangeFromThread change = new ChangeFromThread(19);
+       /* ChangeFromThread change = new ChangeFromThread(19);
         Thread threadA = new Thread(() -> {
             while (change.getCount() <= change.getLimit()) {
                change.buzz();
@@ -56,6 +55,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        System.out.println(change.getResult());
+        System.out.println(change.getResult());*/
     }
 }
