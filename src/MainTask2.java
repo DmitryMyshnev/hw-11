@@ -1,28 +1,11 @@
 import Task1.TimeThread;
 import Task2.ChangeFromThread;
 
-public class Main {
+public class MainTask2 {
     public static void main(String[] args) {
- //--------------------------------------Task1
-
-        TimeThread timeThread = new TimeThread();
-
-            try {
-                while (!timeThread.thread.isInterrupted()) {
-                    if (timeThread.isDeadTime()) {
-                        System.out.println("Прошло 5 секунд");
-                        timeThread.setDeadTime(false);
-                    }
-                }
-                timeThread.thread.interrupt();
-                System.out.println("end");
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-
  //---------------------------------------Task2
 
-       /* ChangeFromThread change = new ChangeFromThread(19);
+        ChangeFromThread change = new ChangeFromThread(19);
         Thread threadA = new Thread(() -> {
             while (change.getCount() <= change.getLimit()) {
                change.buzz();
@@ -55,6 +38,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        System.out.println(change.getResult());*/
+        System.out.println(change.getResult());
     }
+
 }
