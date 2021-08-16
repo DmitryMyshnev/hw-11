@@ -1,3 +1,5 @@
+package Task2;
+
 import Task1.TimeThread;
 import Task2.ChangeFromThread;
 
